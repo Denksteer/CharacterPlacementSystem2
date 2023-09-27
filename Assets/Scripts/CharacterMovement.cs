@@ -9,8 +9,7 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
-        playerCurrentPosition = new Vector3(gridDrawScript.cellSize * 4, gridDrawScript.cellSize * 1, -1);
-        gameObject.transform.position = playerCurrentPosition;
+        PlayerStartingPosition();
     }
 
     private void Update()
@@ -18,6 +17,12 @@ public class CharacterMovement : MonoBehaviour
         PlayerMovement();
     }
 
+
+    public void PlayerStartingPosition()
+    {
+        playerCurrentPosition = new Vector3(gridDrawScript.cellSize * 4, gridDrawScript.cellSize * 1, -1);
+        gameObject.transform.position = playerCurrentPosition;
+    }
     public void PlayerMovement()
     {
         

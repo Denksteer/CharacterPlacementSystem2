@@ -9,6 +9,7 @@ public class GridDrawScript : MonoBehaviour
     public int cellSize;
     public float cellSpacing;
     public GameObject cell;
+    public bool characterAlreadyHere;
 
     private void Start()
     {
@@ -45,6 +46,4 @@ public class GridDrawScript : MonoBehaviour
             }
         }
     }
-
-    
 }

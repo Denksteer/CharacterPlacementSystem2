@@ -4,5 +4,15 @@ using UnityEngine;
 
 public class CellCheck : MonoBehaviour
 {
-    public bool isCharaterHere;
+    public bool gridSpotTaken;
+
+
+    public void CantGoHere()
+    {
+        if (gridSpotTaken == true)
+        {
+           
+        }
+    }
+
 }
