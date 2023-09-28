@@ -373,8 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 8
   cellSize: 3
-  cellSpacing: 0
-  cell: {fileID: 2951557959312836187, guid: a5c3bb3ce70e8614bb5552d9b44c0c72, type: 3}
+  cell: {fileID: 7820893219715607314, guid: a5c3bb3ce70e8614bb5552d9b44c0c72, type: 3}
 --- !u!4 &870437423
 Transform:
   m_ObjectHideFlags: 0
@@ -483,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 1395670871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 3, z: -1}
+  m_LocalPosition: {x: 0.02, y: 0.11, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

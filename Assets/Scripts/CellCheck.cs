@@ -5,14 +5,15 @@ using UnityEngine;
 public class CellCheck : MonoBehaviour
 {
     public bool gridSpotTaken;
-
-
-    public void CantGoHere()
+    private void Update()
     {
-        if (gridSpotTaken == true)
+        if (gridSpotTaken)
         {
-           
+            gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
-
 }

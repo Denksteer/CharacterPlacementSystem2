@@ -7,23 +7,23 @@ public class GridDrawScript : MonoBehaviour
 {
     public int gridSize;
     public int cellSize;
-    public float cellSpacing;
-    public GameObject cell;
-    public bool characterAlreadyHere;
+    
+    public CellCheck cell;
+    public CellCheck[,] cellGrid;
 
     private void Start()
     {
         gridSize = 8;
         cellSize = 3;
-        cellSpacing = 0.5f;
         GridPaint();
+        
     }
 
     private void OnDrawGizmos()
     {
-        for (int y = gridSize; y > 0; y--)
+        for (int y = 0; y < gridSize; y++)
         {
-            for (int x = gridSize; x > 0; x--)
+            for (int x = 0; x < gridSize; x++)
             {
                 Gizmos.DrawWireCube(
                     new Vector3(gameObject.transform.position.x + (x * cellSize), gameObject.transform.position.y + (y * cellSize)), 
@@ -34,16 +34,23 @@ public class GridDrawScript : MonoBehaviour
 
     public void GridPaint()
     {
-        for (int y = gridSize; y > 0; y--)
+        cellGrid = new CellCheck[gridSize, gridSize];
+        for (int y = 0; y < gridSize; y++)
         {
-            for (int x = gridSize; x > 0; x--)
+            for (int x = 0; x < gridSize; x++)
             {
-                GameObject currentCell = Instantiate(cell);
+                CellCheck currentCell = Instantiate(cell);
                 currentCell.transform.position = new Vector3(x * cellSize, y * cellSize);
                 currentCell.transform.localScale = new Vector3(cellSize, cellSize);
                 currentCell.transform.SetParent(gameObject.transform, true);
                 currentCell.name = x + "_" + y;
+                cellGrid[x, y] = currentCell;
             }
         }
     }
+    public bool CanWalkOnCell(int x, int y)
+    {
+        return cellGrid[x, y].gridSpotTaken == false;
+    }
+
 }

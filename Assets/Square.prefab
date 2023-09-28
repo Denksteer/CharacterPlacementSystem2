@@ -97,4 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c147b50437d2a4e8d47a0626ddf2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCharaterHere: 0
+  gridSpotTaken: 0
+  position: {x: 0, y: 0, z: 0}
