@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,9 +28,6 @@ public class CharacterMovement : MonoBehaviour
     }
     public void PlayerMovement()
     {
-        
-
-
 
         if (Input.GetKeyDown(KeyCode.W) 
             && gameObject.transform.position.y < ((gridDrawScript.gridSize -1) * gridDrawScript.cellSize)
